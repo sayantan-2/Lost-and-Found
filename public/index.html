@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lost and Found</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lost and Found</h1>
+        <form id="lostForm">
+            <label for="lostItem">Lost Item:</label>
+            <input type="text" id="lostItem" required>
+
+            <label for="lostDescription">Description:</label>
+            <textarea id="lostDescription" required></textarea>
+
+            <button type="button" onclick="reportLost()">Report Lost</button>
+        </form>
+
+        <hr>
+
+        <form id="foundForm">
+            <label for="foundItem">Found Item:</label>
+            <input type="text" id="foundItem" required>
+
+            <label for="foundDescription">Description:</label>
+            <textarea id="foundDescription" required></textarea>
+
+            <button type="button" onclick="postFound()">Post Found</button>
+        </form>
+
+        <hr>
+
+        <label for="searchInput">Search:</label>
+        <input type="text" id="searchInput" oninput="searchItems()">
+
+        <div id="lostFoundList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
